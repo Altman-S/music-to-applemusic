@@ -1,4 +1,9 @@
-# Forked from https://gitee.com/kidKing/music
+# Forked from: https://gitee.com/kidKing/music
+
++ 网易云歌单导入Apple Music教程：https://www.bilibili.com/video/BV1S44y1B7VY
+
++ QQ音乐导入Apple Music教程：https://www.bilibili.com/video/BV1SM4y1T7DC
+
 
 ## 将歌单下载，并且导入Apple Music
 
