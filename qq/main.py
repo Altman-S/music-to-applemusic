@@ -37,7 +37,8 @@ def build_song_info(song, count, save_path, cookie):
     # 专辑封面
     album_cover = "https://y.gtimg.cn/music/photo_new/T002R300x300M000{}.jpg".format(song["albummid"])
     # 获取下载连接
-    url = "{}/song/url?id={}&mediaId={}&ownCookie=1".format(base_url, song["songmid"], song["strMediaMid"])
+    url = "{}/song/url?id={}&mediaId={}&type={}&ownCookie=1".format(base_url, song["songmid"], song["strMediaMid"],
+                                                                    "320")
     json = requests.get(url, cookies=cookie).json()
     mp3_url = json.get("data")
     download_item(str(count), mp3_url, song["songname"], album_cover, song["singer"][0]["name"],
@@ -66,7 +67,7 @@ def songlist_info(song_id, save_path, cookie):
             build_song_info(song, count, save_path, cookie)
         except Exception as e:
             print(e)
-            print("歌曲id:{},发生异常，联系管理员q：872019874")
+            print("歌曲id:{},歌曲名称:{},发生异常，联系管理员q：872019874".format(song_id, song["songname"]))
             continue
 
 
